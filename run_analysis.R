@@ -62,18 +62,18 @@ library(magrittr)
 
 ##read in the test data, the labels and subject and merge them into one file called test
 
-testdf<-read.table("C:\\Users\\Peter\\Documents\\getdata-projectfiles-UCI HAR Dataset\\UCI HAR Dataset\\test\\X_test.txt")
-testdflabels<-read.table("C:\\Users\\Peter\\Documents\\getdata-projectfiles-UCI HAR Dataset\\UCI HAR Dataset\\test\\y_test.txt")
-subjecttest<-read.table("C:\\Users\\Peter\\Documents\\getdata-projectfiles-UCI HAR Dataset\\UCI HAR Dataset\\test\\subject_test.txt")
+testdf<-read.table("X_test.txt")
+testdflabels<-read.table("y_test.txt")
+subjecttest<-read.table("subject_test.txt")
 
 test<-cbind(testdf,testdflabels,subjecttest)
 
 
 ##read in the train data, the labels and subject and merge them into one file called train
 
-traindf<-read.table("C:\\Users\\Peter\\Documents\\getdata-projectfiles-UCI HAR Dataset\\UCI HAR Dataset\\train\\X_train.txt")
-traindflabels<-read.table("C:\\Users\\Peter\\Documents\\getdata-projectfiles-UCI HAR Dataset\\UCI HAR Dataset\\train\\y_train.txt")
-subjecttrain<-read.table("C:\\Users\\Peter\\Documents\\getdata-projectfiles-UCI HAR Dataset\\UCI HAR Dataset\\train\\subject_train.txt")
+traindf<-read.table("X_train.txt")
+traindflabels<-read.table("y_train.txt")
+subjecttrain<-read.table("subject_train.txt")
 
 train<-cbind(traindf,traindflabels,subjecttrain)
 
@@ -98,7 +98,7 @@ ifelse(total.rows==nrow(merged.test.train),"merge succesfull all rows merged cor
 
 ##read in the feature names and apply them to the dataset, they are column V2
 ##4. Appropriately labels the data set with descriptive variable names. read in the variable names
-featuredflabels<-read.csv("C:\\Users\\Peter\\Documents\\getdata-projectfiles-UCI HAR Dataset\\UCI HAR Dataset\\features.txt",sep=" ",header=F)
+featuredflabels<-read.csv("features.txt",sep=" ",header=F)
 
 ##check the column names
 ##str(featuredflabels)  validty check uncomment the first time you run this
